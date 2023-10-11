@@ -1,5 +1,7 @@
 import { Modal, View, Text, Pressable, StyleSheet } from 'react-native';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import { useState } from 'react';
+import { StatusBar } from 'expo-status-bar';
 
 export default function EmojiPicker({ isVisible, children, onClose }) {
 
@@ -25,10 +27,6 @@ export default function EmojiPicker({ isVisible, children, onClose }) {
         </View>
         {children}
       </View>
-      <EmojiPicker isVisible={isModalVisible} onClose={onModalClose}>
-        {/* A list of emoji component will go here */}
-      </EmojiPicker>
-      <StatusBar style="auto" />
     </Modal>
   );
 }
